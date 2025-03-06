@@ -12,17 +12,19 @@
   "dependencies": {
     "@hono/node-server": "^1.13.8",
     "@prisma/client": "^6.4.1",
-    "hono": "^4.7.4"
+    "@types/node": "^22.13.9",
+    "hono": "^4.7.4",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "xss": "^1.0.15",
+    "zod": "^3.24.2"
   },
   "devDependencies": {
     "@types/jest": "^29.5.14",
-    "@types/node": "^20.17.23",
+    "globals": "^16.0.0",
     "jest": "^29.7.0",
     "ts-jest": "^29.2.6",
-    "ts-node": "^10.9.2",
     "tsx": "^4.7.1",
-    "typescript": "^5.8.2",
-    "xss": "^1.0.15",
-    "zod": "^3.24.2"
+    "typescript": "^5.8.2"
   }
 }
