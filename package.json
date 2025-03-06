@@ -1,6 +1,9 @@
 {
   "name": "v3oli",
   "type": "module",
+  "engines": {
+    "node": "22.0.0"
+  },
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "build": "npx prisma generate && tsc",
