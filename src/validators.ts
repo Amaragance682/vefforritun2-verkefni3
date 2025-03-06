@@ -1,5 +1,5 @@
 import { z } from "zod";
-import xss from "xss";
+import {filterXSS} from "xss";
 
 type JsonValue = string | number | boolean | null | JsonObject | JsonArray;
 type JsonObject = { [key: string]: JsonValue };
@@ -7,7 +7,7 @@ type JsonArray = JsonValue[];
 
 export function sanitizeJSON<T extends JsonValue>(input: T): T {
   if (typeof input === "string") {
-    return xss(input) as T;
+    return filterXSS(input) as T;
   }
   if (Array.isArray(input)) {
     return input.map(sanitizeJSON) as T;
