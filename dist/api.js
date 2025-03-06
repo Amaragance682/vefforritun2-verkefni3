@@ -48,7 +48,7 @@ export async function getQuestionsByCategory(slug) {
     });
     return await prisma.questions.findMany({
         where: {
-            categoryId: categoryResult.id,
+            categoryId: categoryResult?.id,
         },
     });
 }

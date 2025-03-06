@@ -93,6 +93,15 @@ app.patch("/category/:slug", async (c) => {
   }
 
   const data = validateCategory(sanitizeJSON(dataToValidate));
+  if (!data.success) {
+    return c.json(
+      {
+        error: "data was invalid",
+        errors: data.error.flatten(),
+      },
+      400,
+    );
+  }
 
   const categoryResult = await getCategory(slug.data);
   if (!categoryResult) {
