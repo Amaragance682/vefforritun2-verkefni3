@@ -1,12 +1,8 @@
-import type { Config } from "jest";
-
-const config: Config = {
+export default {
   testEnvironment: "jest-environment-node",
-  extensionsToTreatAsEsm: [".ts"], 
+  preset: "ts-jest",
   transform: {
     "^.+\\.ts$": "ts-jest",
   },
-  moduleFileExtensions: ["ts", "js"],
+  moduleFileExtensions: ["ts", "js", "tsx", "jsx", "json", "node"],
 };
-
-export default config;
